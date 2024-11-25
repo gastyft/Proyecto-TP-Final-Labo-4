@@ -1,0 +1,47 @@
+<!--  inicialmente tenia para videos locales  *ngIf="video.url && video.url.endsWith('.mp4')"-->
+<!-- lo comentado funciona bien. lo de abajo es para que muestre GIF de error en caso de no cargar
+  <div class="d-flex justify-content-center">
+    <div class="mx-auto"> 
+      <video *ngIf="video.url.includes('firebasestorage')" controls [src]="video.url" width="600" height="600" (ended)="onVideoEnded()">
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+      
+      
+      <iframe *ngIf="safeUrl && video.url.includes('youtube.com')" [src]="safeUrl" width="760" height="515" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+-->
+<div class="d-flex justify-content-center">
+  <div class="mx-auto">
+    <video 
+      *ngIf="video &&!videoError && video.url.includes('firebasestorage') " 
+      controls 
+      [src]="video.url" 
+      width="600" 
+      height="600" 
+      (ended)="onVideoEnded()" 
+      (error)="videoError = true"
+    >
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+ 
+    <iframe 
+      *ngIf="!videoError && safeUrl && video.url.includes('youtube.com')" 
+      [src]="safeUrl" 
+      width="760" 
+      height="515" 
+      frameborder="0" 
+      allowfullscreen 
+      (error)="videoError = true"
+    ></iframe>
+
+   
+    <ng-template #errorTemplate>
+      <img src="assets/no-signal.gif" alt="No Signal" width="600" height="600">
+    </ng-template>
+
+   
+    <ng-container *ngIf="videoError || !video" [ngTemplateOutlet]="errorTemplate"></ng-container>
+  </div>
+</div>

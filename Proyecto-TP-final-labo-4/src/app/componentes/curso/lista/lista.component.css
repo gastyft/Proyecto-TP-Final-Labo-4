@@ -1,0 +1,22 @@
+#sidebar-wrapper {
+    width: 250px;  
+  }
+  
+  #page-content-wrapper {
+    margin-left: 250px; 
+  }
+  
+  .accordion-button {
+    white-space: nowrap; 
+  }
+  
+  .accordion-body {
+    overflow-y: auto;  
+    max-height: 200px;  
+  }
+
+  .scrollable-list {
+    max-height: 90vh;  
+    overflow-y: auto;
+}
+  
