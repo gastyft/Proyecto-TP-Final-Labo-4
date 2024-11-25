@@ -4,11 +4,11 @@ import { VideoPlayerComponent } from '../../clase/video-player/video-player.comp
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CursoService } from '../../../services/curso.service';
-import { Curso } from '../../../models/curso.model';
 import swal from 'sweetalert';
 import { NavAlumnoComponent } from "../../alumno/nav-alumno/nav-alumno.component";
 import { TokenService } from '../../../services/token.service';
 import { AlumnoCertificateService } from '../../../services/alumno-certificate.service';
+import { Curso } from '../../../models/curso.model';
  
 @Component({
   selector: 'app-principal',

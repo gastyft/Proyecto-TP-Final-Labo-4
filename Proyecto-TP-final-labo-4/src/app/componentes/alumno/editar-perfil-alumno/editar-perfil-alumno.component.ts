@@ -1,6 +1,6 @@
  
-import { NavAlumnoComponent } from "../nav-alumno/nav-alumno.component";
-import { Alumno } from '../../../models/alumno.model';
+import { NavAlumnoComponent } from '../nav-alumno/nav-alumno.component';
+import { Alumno } from "../../../models/alumno.model";
  
 import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';

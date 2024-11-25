@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavAlumnoComponent } from "../nav-alumno/nav-alumno.component";
-import { ListarCursosAlumnoComponent } from "../listar-cursos-alumno/listar-cursos-alumno.component";
+ 
 import { ActivatedRoute, Router } from '@angular/router';
 import { TokenService } from '../../../services/token.service';
+import { ListarCursosAlumnoComponent } from '../listar-cursos-alumno/listar-cursos-alumno.component';
 
 @Component({
   selector: 'app-principal-alumno',

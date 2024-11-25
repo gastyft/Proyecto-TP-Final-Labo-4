@@ -1,0 +1,20 @@
+ <div class="bod">
+    <div class="container">
+      
+        <div class="left-section">
+          <h1>CursosOnline UTN</h1>
+        <p>CursosOnline te ayuda a preparte e insertarte en el mercado laboral moderno.</p>
+        </div>
+        
+      
+        <div class="login-form">
+          <form >
+            <input type="text" placeholder="Nombre de usuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+            <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password"  required>
+            <button type="button" (click)="onLogin()" >Iniciar sesión</button>
+          
+          </form>
+          <a  class="register-button" routerLink="/registro" >Crear cuenta nueva</a>
+        </div>
+      </div></div>
+ 
